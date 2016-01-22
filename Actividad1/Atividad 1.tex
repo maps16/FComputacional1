@@ -60,5 +60,26 @@ a lo que se le conoce como la ley de Christiaan Huygens para el periodo. Note qu
 \subsection{Regla de oro para la longitud del péndulo}
 {\large $ T_o=2\pi\sqrt{\frac{\ell}{g}}$} puede ser expresada como {\large$\ell=\frac{g}{\pi^2}\times \frac{T_o^2}{4}$}\\
 Si las unidades SI son usadas($\frac{m}{s}$), y asumimos que las mediciones se hacen en la superficie de la tierra, donde {g $\approx$9.81$\frac{m}{s^2}$}, y $g/\pi^2 \approx 1$.
+Por lo tanto, una aproximación relativamente razonable para la longitud y el periodo son,
+$$\ell\approx\frac{T_o^2}{4}$$
+$$T_o\approx2\sqrt{\ell}$$
+donde $T_o$ el numero en segundos entre dos pulsaciones, y $\ell$ se mide en metros.
+
+\section{Periodo-amplitud arbitrario}
+Para amplitudes más allá de la aproximación de una ángulo pequeño, se puede calcular el período exacto invirtiendo la ecuación para velocidad angular obtenida a partir del método de energía(Eq.2),
+$$\frac{dt}{d\theta}=\sqrt{\frac{\ell}{2g}}\frac{1}{\sqrt{\cos\theta-\cos\theta_o}}$$
+y luego integrando sobre un ciclo completo,
+$$ T=t(\theta_o\rightarrow 0 \rightarrow -\theta_o \rightarrow 0 \rightarrow \theta)$$
+o dos veces la mitad del ciclo
+$$ T=2t(\theta_o\rightarrow 0 \rightarrow -\theta_o )$$
+o 4 veces un cuarto de ciclo
+$$ T=t(\theta_o\rightarrow 0 )$$
+Lo que lleva a
+$$T=4\sqrt{\frac{\ell}{2g}}\int_0^{\theta_o} \frac{1}{\sqrt{\cos\theta-\cos\theta_o}} d\theta $$
+Notese que la integral diverge cuando $\theta_o$ se aproxima a la vertical
+$$\lim_{\theta_o\rightarrow \pi}T=\infty$$
+de manera que un péndulo con la energia suficiente para ir a la vertical, no pueda llegar.\\
+Esta integral se puede reescribir en terminos de integrales elipticas como
+$$ T= 4\sqrt{\frac{\ell}{g}}F ( \frac{\theta_o}{2},\csc\frac{\theta_o}{2})\csc\frac{\theta_o}{2} $$
 
 \end{document}
