@@ -12,8 +12,8 @@ t = float(input('Proporciona el periodo del satelite (minutos)'))
 T = t*60
 
 #Calculo de la altura desde la superficie de la tierra de la orbita
-H =( ((G*M*T*T)/(4*pi*pi))**(1/3))-R #Es en m
-#h = H/1000
+H = ((G*M*T**2)/(4*pi**2))**(1./3.)-R
+
 print 'La altura a la que orbita un satelite de periodo ', t,'minutos es de ', H,'metros'
 
 
