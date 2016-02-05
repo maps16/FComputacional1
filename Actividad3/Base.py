@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 from scipy.interpolate import interp1d
 
 # Original "data set" --- 21 random numbers between 0 and 1.
-x1 = np.linspace(-1,1,21)
-y1 = np.random.random(21)
+x0 = np.linspace(-1,1,21)
+y0 = np.random.random(21)
 
 plt.plot(x0, y0, 'o', label='Data')
 
@@ -16,7 +16,7 @@ options = ('linear', 'nearest', 'zero', 'slinear', 'quadratic', 'cubic', 10)
 
 
 for o in options:
-    f = interp1d(x1, y1, kind=o)    # interpolation function
+    f = interp1d(x0, y0, kind=o)    # interpolation function
     plt.plot(x, f(x), label=o)      # plot of interpolated data
 
 plt.legend(loc='best')
