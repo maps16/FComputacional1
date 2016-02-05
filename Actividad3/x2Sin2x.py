@@ -3,15 +3,16 @@ import matplotlib.pyplot as plt
 from scipy.interpolate import interp1d
 
 #Generando datos
-x01 = np.random.random(10)
-x1 = 3.0*x01
-y1 = np.sin(2.0*x1)
+x01 = np.random.random(16)
+x1 = 6.0*x01-3.0
+y1 = (x1*x1)*(np.sin(2.0*x1))
+
 
 #Graficar los puntos aleatorios x y los f(x)=Sin(2x)
 plt.plot(x1, y1, 'o', label='Data')
 
 #Punto para interpolar
-x = np.linspace(min(x1),max(x1),101)
+x = np.linspace(min(x1),max(x1),200)
 
 #Opciones para interp1d
 opc = ('linear', 'quadratic', 'cubic')
