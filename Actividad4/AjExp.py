@@ -2,7 +2,8 @@
 #importando librerias
 import matplotlib.pyplot as plt
 import numpy as np
-from scipy import  optimize 
+from scipy.optimize import  curve_fit
+
 
 #Obtencion de datos
 datos = np.loadtxt('PvsA.txt')
@@ -16,15 +17,13 @@ y1 = datos[:,1]
 def f(x,a,b,c):
     return c * np.exp(-a * x) + b
 
-#Generando Estimación
-y2 = y1 + 0.2 * np.random.normal(size=len(x1))
-
 #Optimizacion de la curva
-popt, pcov = optimize.curve_fit(f,x1,y2)
+popt, pcov = curve_fit(f,x1,y1)
 
 #Genero datos y grafico
 
-plt.plot(x1, y1, "go", x1, f(x1, *popt), "b-")
+plt.plot(x1, y1, "go", label='Datos')
+plt.plot( x1, f(x1, *popt), "b-", label='Ajuste Exponencial')
 
 #Propiedades de la Grafica
 plt.grid()
