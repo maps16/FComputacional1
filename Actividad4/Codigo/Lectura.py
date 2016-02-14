@@ -19,4 +19,3 @@ xr = np.polyval([m,b],x)
 #Graficar el ajuste lineal
 plt.plot(x,xr,'r')
 plt.show()
-    
