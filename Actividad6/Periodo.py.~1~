@@ -1,0 +1,11 @@
+#LIBRERIAS
+import numpy as np
+from scipy.integrate import quad
+
+#Constantes del problema.
+l = 5     #Longitud Del Pendulo
+g = 9.81  #Gravedad
+
+#Caso de oscilaciones pequeñas
+T_o = 2 * np.pi*np.sqrt(l/g)
+
