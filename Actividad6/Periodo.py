@@ -8,6 +8,7 @@ l = 4.0     #Longitud Del Pendulo
 g = 9.81  #Gravedad
 n = 500
 eps= 0.001
+theta = np.linspace(0.0,np.pi,n)
 theta_0 =np.linspace(eps, np.pi/2-eps, n)
 res = [0 for i in range(n)]
 err = [0 for i in range(n)]
@@ -32,10 +33,10 @@ for i in range(n):
 #Calculo del error
 ErrorR = (T/ T_o)
 x = (theta_0*180.0)/np.pi #Transformacion a Grados
-
+x1 = (theta * 180.0)/np.pi
 #Grafica
-plt.plot(x, ErrorR)
+plt.plot(x1,T)
+#plt.plot(x, ErrorR)
 plt.xlabel("Angulo")
 plt.ylabel("Error Relativo T/To")
 plt.show()
-
