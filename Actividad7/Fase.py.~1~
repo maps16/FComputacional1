@@ -4,11 +4,11 @@ from scipy.integrate import odeint
 
 #Definiendo las cosntantes de la Ec. Diferencial
 g = 9.81
-l = 0.99
-b = 0.0 #Pendulo simple por lo tanto sin friccion
+l = 0.01
+b = 1.0 #Pendulo simple por lo tanto sin friccion
 c = g/l
 angulo= 0
-Vangular= 0.10
+Vangular= 10
 
 
 #Definicion de la ecuacion diderencial del pendulo
@@ -21,7 +21,7 @@ def p (y, t, b, c):
 #Definiendo condiciones iniciales
 
 y0 = [angulo, Vangular]
-t = np.linspace(0,10,501) #Para generar la sollucion
+t = np.linspace(0,50,501) #Para generar la sollucion
 
 #Resolver la Ec. Diferencial
 
