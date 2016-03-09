@@ -7,8 +7,7 @@ g = 9.81
 l = 1.0
 b = 0.0 #Pendulo simple por lo tanto sin friccion
 c = g/l
-angulo= 0
-Vangular= 0.9
+
 
 #Codiciones Iniciales
 X_f1 =np.array([-4.0*np.pi,4.0*np.pi])
@@ -45,17 +44,13 @@ for v, col in zip(values, vcolors):
 
 
 #-------------------------------------------------------
-# Drow direction fields, using matplotlib 's quiver function
-# I choose to plot normalized arrows and to use colors to give information on
-# the growth speed
+#Graficar
 plt.title('Trayectorias y direcciones')
-#Q = plt.quiver(X1, Y1, DX1, DX1, M, pivot='mid', cmap=plt.cm.prism)
 plt.xlabel('Angulo')
 plt.ylabel('Velocidad Angular')
-#plt.legend(loc="best")
 plt.grid()
 plt.xlim(-2.0*np.pi,2.0*np.pi)
 plt.ylim(-12,12)
-#f2.savefig('rabbits_and_foxes_2.png')
+
 
 plt.show()
