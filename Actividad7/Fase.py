@@ -33,13 +33,13 @@ plt.figure(2)
 for v, col in zip(values, vcolors):
     y0 = v * X_f1                               # Punto de Inicio   
     X = odeint(p, y0, t, args=(b,c))         
-    plt.plot( X[:,0], X[:,1], lw=3.5*v, color=col, label='X0=(%.f, %.f)' % ( y0[0], y0[1]) )
+    plt.plot( X[:,0], X[:,1], color=col, label='X0=(%.f, %.f)' % ( y0[0], y0[1]) )
 
 # Trayectoria 2                                 #Completar el diagrama fase
 for v, col in zip(values, vcolors):
     y1 = v * X_f2                               # Punto de Inicio   
     X1 = odeint(p, y1, t, args=(b,c))           
-    plt.plot( X1[:,0], X1[:,1], lw=3.5*v, color=col, label='X0=(%.f, %.f)' % ( y1[0], y1[1]) )
+    plt.plot( X1[:,0], X1[:,1], color=col, label='X0=(%.f, %.f)' % ( y1[0], y1[1]) )
 
 
 
@@ -50,7 +50,7 @@ plt.xlabel('Angulo')
 plt.ylabel('Velocidad Angular')
 plt.grid()
 plt.xlim(-2.0*np.pi,2.0*np.pi)
-plt.ylim(-12,12)
+plt.ylim(-10,10)
 
 
 plt.show()
