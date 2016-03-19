@@ -17,9 +17,7 @@ T = [0 for i in range(n)]
 #Caso de oscilaciones pequenas
 T_o = 2.0 * np.pi*np.sqrt(l/g)
 
-
 #Para Oscilaciones grandes
-
 #Calculo de la integral
 inte = lambda x, k : 1.0 /(np.sqrt(np.cos(x)-np.cos(k)))
 
@@ -34,13 +32,16 @@ for i in range(n):
 ErrorR = (T/T_o)
 x = (theta * 180.0)/np.pi #Transformacion a Grados
 x1 = (theta * 180.0)/np.pi
-#Grafica
+
+#Grafica del Error Relativo
 plt.figure(1)
 plt.plot(x1,ErrorR)
 plt.xlabel("Angulo")
 plt.ylabel("Error Relativo T/To")
+plt.xlim(0.0,90.0)
+plt.ylim(1.0,1.2)
 plt.grid()
-
+#Grafica 2 Divergencia de la integral
 plt.figure(2)
 plt.plot(x1,T)
 plt.xlabel("Angulo")
