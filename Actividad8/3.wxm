@@ -2,56 +2,39 @@
 /* [ Created with wxMaxima version 13.04.2 ] */
 
 /* [wxMaxima: input   start ] */
-a: [6,2,5];
+f(x,y) := (6*x^2-3*y^2)^2;
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-b: [8,-3,0];
+load(draw);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-0.2*a;
+draw3d(explicit(f(x,y),x,-3,3,y,-3,3));
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-a+b;
+draw3d(enhanced3d = true, explicit(f(x,y),x,-3,3,y,-3,3));
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-a.b;
+draw3d(explicit(f(x,y),x,-5,5,y,-5,5),
+    contour_levels = 15,
+    contour        = map);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-load(vect);
+contour_plot(f(x,y),[x,-5,5],[y,-5,5]);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-a ~ b;
+draw3d(enhanced3d = true,
+       explicit(f(x,y),x,-3,3,y,-3,3),
+       contour_levels = 15,
+       contour = surface,
+       surface_hide = true);
 /* [wxMaxima: input   end   ] */
 
-/* [wxMaxima: input   start ] */
-express(%);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-sqrt(a.a);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-(a.b)/(a.a)*a;
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-c: [-5,2,9];
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-a.(b~c);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-express(%);
-/* [wxMaxima: input   end   ] */
 
 /* Maxima can't load/batch files which end with a comment! */
 "Created with wxMaxima"$

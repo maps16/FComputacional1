@@ -2,55 +2,47 @@
 /* [ Created with wxMaxima version 13.04.2 ] */
 
 /* [wxMaxima: input   start ] */
-a: [6,2,5];
+r(t) := [t, cos(t), sin(t)];
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-b: [8,-3,0];
+rp(t) := [1,-sin(t), cos(t)];
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-0.2*a;
+Tp(t) := [0,-cos(t), sin(t)]/sqrt(2);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-a+b;
+sqrt(Tp(t) . Tp(t))/sqrt(rp(t).rp(t));
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-a.b;
+trigsimp(%);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-load(vect);
+define(kappa(t),%);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-a ~ b;
+integrate(r(t),t);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-express(%);
+g(t) := [2*t,3*sin(t),3*cos(t)];
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-sqrt(a.a);
+define(gp(t) , diff(g(t),t));
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-(a.b)/(a.a)*a;
+integrate(trigsimp(sqrt(gp(t).gp(t))),t,0,2*%pi);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-c: [-5,2,9];
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-a.(b~c);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-express(%);
+romberg(sqrt(gp(t).gp(t)),t,0,2*%pi);
 /* [wxMaxima: input   end   ] */
 
 /* Maxima can't load/batch files which end with a comment! */
