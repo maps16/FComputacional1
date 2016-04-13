@@ -1,0 +1,25 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+f(x,y) := x+y;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+[x,y]: [u^3-v^4, 5*u*v];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+J: jacobian([x,y],[u,v]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+J: determinant(J);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(integrate(f(x,y)*J,u,1,2),v,3,4);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

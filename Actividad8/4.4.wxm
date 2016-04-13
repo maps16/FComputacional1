@@ -1,0 +1,33 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+f(x,y,z):= y*z;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+[x,y,z]:[r*cos(theta),r*sin(theta),z];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(integrate(integrate(f(x,y,z)*r,z,0,3),r,0,2),theta,0,%pi);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(f,x,y,z);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f(x,y,z):= x*z;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+[x,y,z]: [rho*sin(phi)*cos(theta),rho*sin(phi)*sin(theta),rho*cos(theta)];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+integrate(integrate(integrate(f(x,y,z)*rho^2*sin(phi),rho,0,1),theta,0,%pi),phi,0,%pi/2);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

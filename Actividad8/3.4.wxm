@@ -1,0 +1,53 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+f(x,y):= exp(x^2)*sin(y);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load(vect);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+scalefactors([x,y]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+gdf : grad(f(x,y));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ev(express(gdf),diff);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+define(gdf(x,y),%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+v:[3,4];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+(gdf(1,2).v)/sqrt(v.v);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ev(%,diff);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sqrt(gdf(1,2).gdf(1,2));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(ev(%,diff));
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

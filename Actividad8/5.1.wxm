@@ -1,0 +1,36 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+load(draw);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+F(x,y):= (4*x*cos(y),y*x);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+coord: setify(makelist(k,k,-6,6));
+points2d :listify(cartesian_product(coord,coord));
+vf2d(x,y):= vector([x,y],[x*y*cos(y),x*2*y]/10);
+vect2: makelist(vf2d(k[1],k[2]), k, points2d);
+apply ( draw2d , append ([head_length=0.2], [color = cyan ] , vect2 ));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+kill(f,x,y,gdf);
+f(x,y) := x^2 - y^2;
+scalefactors ([ x , y ]);
+gdf (x , y ) := grad ( f (x , y ));
+ev ( express ( gdf (x , y )) , diff );
+define ( gdf (x , y ) , %);
+coord: setify(makelist(k,k,-4,4));
+points2d : listify(cartesian_product(coord,coord));
+vf2d(x,y):= vector([x,y],gdf(x,y)/8);
+vect2: makelist(vf2d(k[1],k[2]),k, points2d);
+apply(draw2d, append([head_length=0.2, color=cyan], vect2));
+/* [wxMaxima: input   end   ] */
+
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
