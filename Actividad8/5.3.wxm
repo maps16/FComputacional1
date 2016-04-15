@@ -1,0 +1,57 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+F(x,y):= [4*x^3-5*y^2,5*y^3-3*x];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+load(vect);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+scalefactors([x,y]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+curl(F(x,y));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+express(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ev(%,diff);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+F(x,y):= [x^3+5*y,5*y^3+5*x];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+ev(express(curl(F(x,y))),diff);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+F(u,v):= [u^3+5*v,5*v^3+5*u];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+scalefactors([u,v]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+potential(F(u,v));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+define(f(u,v),%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f(2,3)-f(0,1);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
