@@ -2,15 +2,27 @@
 /* [ Created with wxMaxima version 13.04.2 ] */
 
 /* [wxMaxima: input   start ] */
-f(x,y) := exp(x^2) * cos(y);
+load(vect);
+f(x,y):= exp(x^2)*sin(y);
+scalefactors([x,y]);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-taylor(f(x,y), [x,y],[1,2],1);
+gdf : grad(f(x,y));
+ev(express(gdf),diff);
+define(gdf(x,y),%);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-diff(f(x,y));
+v:[3,4];
+(gdf(1,2).v)/sqrt(v.v);
+ev(%,diff);
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sqrt(gdf(1,2).gdf(1,2));
+float(ev(%,diff));
 /* [wxMaxima: input   end   ] */
 
 /* Maxima can't load/batch files which end with a comment! */

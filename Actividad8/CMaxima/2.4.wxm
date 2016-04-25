@@ -1,0 +1,19 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+r(t) := [t, cos(t), sin(t)];
+rp(t) := [1,-sin(t), cos(t)];
+Tp(t) := [0,-cos(t), sin(t)]/sqrt(2);
+sqrt(Tp(t) . Tp(t))/sqrt(rp(t).rp(t));
+trigsimp(%);
+define(kappa(t),%);
+integrate(r(t),t);
+g(t) := [2*t,3*sin(t),3*cos(t)];
+define(gp(t) , diff(g(t),t));
+integrate(trigsimp(sqrt(gp(t).gp(t))),t,0,2*%pi);
+romberg(sqrt(gp(t).gp(t)),t,0,2*%pi);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

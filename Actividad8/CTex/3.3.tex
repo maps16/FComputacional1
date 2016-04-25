@@ -1,0 +1,147 @@
+\documentclass{article}
+
+%% Created with wxMaxima 13.04.2
+
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+
+\definecolor{labelcolor}{RGB}{100,0,0}
+
+\begin{document}
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i1) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+f(x,y):= exp(x^3)*sin(4*y);
+[x,y] : [s^2*t, s*t^2];
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o1) }
+\mathrm{f}\left( x,y\right) :=\mathrm{exp}\left( {x}^{3}\right) \,\mathrm{sin}\left( 4\,y\right) 
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o2) }
+[{s}^{2}\,t,s\,{t}^{2}]
+\end{math}
+%%%%%%%%%%%%%%%
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i3) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+diff(f(x,y),s);
+diff(f(x,y),t);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o3) }
+6\,{s}^{5}\,{t}^{3}\,{e}^{{s}^{6}\,{t}^{3}}\,\mathrm{sin}\left( 4\,s\,{t}^{2}\right) +4\,{t}^{2}\,{e}^{{s}^{6}\,{t}^{3}}\,\mathrm{cos}\left( 4\,s\,{t}^{2}\right) 
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o4) }
+3\,{s}^{6}\,{t}^{2}\,{e}^{{s}^{6}\,{t}^{3}}\,\mathrm{sin}\left( 4\,s\,{t}^{2}\right) +8\,s\,t\,{e}^{{s}^{6}\,{t}^{3}}\,\mathrm{cos}\left( 4\,s\,{t}^{2}\right) 
+\end{math}
+%%%%%%%%%%%%%%%
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i5) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+diff(f(u,v),u);
+kill(x,y);
+diff(f(x,y),x);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o5) }
+3\,{u}^{2}\,{e}^{{u}^{3}}\,\mathrm{sin}\left( 4\,v\right) 
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o6) }
+done
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o7) }
+3\,{x}^{2}\,{e}^{{x}^{3}}\,\mathrm{sin}\left( 4\,y\right) 
+\end{math}
+%%%%%%%%%%%%%%%
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i8) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+F: 3*x*y^4*z^2 + 2*x*y*2*z-3*x*z-x;
+Fx: diff(F,x);
+Fy: diff(F,y);
+Fz: diff(F,z);
+[-Fx/Fy,-Fy/Fz];
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o8) }
+3\,x\,{y}^{4}\,{z}^{2}+4\,x\,y\,z−3\,x\,z−x
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o9) }
+3\,{y}^{4}\,{z}^{2}+4\,y\,z−3\,z−1
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o10) }
+12\,x\,{y}^{3}\,{z}^{2}+4\,x\,z
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o11) }
+6\,x\,{y}^{4}\,z+4\,x\,y−3\,x
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o12) }
+[\frac{−3\,{y}^{4}\,{z}^{2}−4\,y\,z+3\,z+1}{12\,x\,{y}^{3}\,{z}^{2}+4\,x\,z},\frac{−12\,x\,{y}^{3}\,{z}^{2}−4\,x\,z}{6\,x\,{y}^{4}\,z+4\,x\,y−3\,x}]
+\end{math}
+%%%%%%%%%%%%%%%
+
+\end{document}

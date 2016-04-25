@@ -3,53 +3,25 @@
 
 /* [wxMaxima: input   start ] */
 f(x,y):= exp(x^3)*sin(4*y);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
 [x,y] : [s^2*t, s*t^2];
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
 diff(f(x,y),s);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
 diff(f(x,y),t);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-diff(f(x,y),x);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
 diff(f(u,v),u);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
 kill(x,y);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
 diff(f(x,y),x);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
 F: 3*x*y^4*z^2 + 2*x*y*2*z-3*x*z-x;
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
 Fx: diff(F,x);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
 Fy: diff(F,y);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
 Fz: diff(F,z);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
 [-Fx/Fy,-Fy/Fz];
 /* [wxMaxima: input   end   ] */
 

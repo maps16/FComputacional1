@@ -1,0 +1,34 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+r(t) := [cos(t), sin(t), t];
+r(1);
+float(%);
+load(draw);
+draw3d(parametric(sin(1*t),cos(t),-sin(5*t),t, -4,4));
+limit(r(t),t,2);
+float(%);
+limit(r(t),t, 2, plus);
+limit(r(t), t,3,minus);
+diff(r(t), t);
+wrong(t) := diff(r(t),t);
+define(rp(t), diff(r(t),t));
+float(rp(1));
+load(eigen);
+uvect(rp(t));
+trigsimp(%);
+define(T(t), %);
+define(Tp(t), diff(T(t),t));
+uvect(Tp(t));
+trigsimp(%);
+define(N(t),%);
+load(vect);
+express(T(t)~N(t));
+trigsimp(%);
+define(B(t),%);
+float(B(1));
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

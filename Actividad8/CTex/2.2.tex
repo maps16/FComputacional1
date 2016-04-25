@@ -1,0 +1,50 @@
+\documentclass{article}
+
+%% Created with wxMaxima 13.04.2
+
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+
+\definecolor{labelcolor}{RGB}{100,0,0}
+
+\begin{document}
+
+\noindent
+%========================================
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i1) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+ellips1: x^2/3+0.5*x*y+z   = 0;
+load(draw);
+draw3d(enhanced3d = true,
+       palette = [cyan,blue,cyan],
+       implicit(ellips1, x,-100,100, y,-100,100, z,-100,100));
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o1) }
+z+0.5\,x\,y+\frac{{x}^{2}}{3}=0
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o2) }
+/usr/share/maxima/5.34.1/share/draw/draw.lisp
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o3) }
+[\mathrm{gr3d}\left( implicit\right) ]
+\end{math}
+%%%%%%%%%%%%%%%
+
+\end{document}

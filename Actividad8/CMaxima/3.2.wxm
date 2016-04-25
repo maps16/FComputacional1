@@ -2,23 +2,15 @@
 /* [ Created with wxMaxima version 13.04.2 ] */
 
 /* [wxMaxima: input   start ] */
-diff(f(x,y),x);
+f(x,y) := exp(x) * cos(y^2);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-diff(diff(f(x,y),x),x);
+taylor(f(x,y), [x,y],[1,2],1);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-diff(diff(f(x,y),x),y);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-G : x^7*y^8;
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-diff(G , x,1, y,2 , x,3);
+diff(f(x,y));
 /* [wxMaxima: input   end   ] */
 
 /* Maxima can't load/batch files which end with a comment! */

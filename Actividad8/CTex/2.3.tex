@@ -1,0 +1,186 @@
+\documentclass{article}
+
+%% Created with wxMaxima 13.04.2
+
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+
+\definecolor{labelcolor}{RGB}{100,0,0}
+
+\begin{document}
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i1) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+r(t) := [cos(t), sin(t), t];
+r(1);
+float(%);
+load(draw);
+draw3d(parametric(sin(1*t),cos(t),-sin(5*t),t, -4,4));
+limit(r(t),t,2);
+float(%);
+limit(r(t),t, 2, plus);
+limit(r(t), t,3,minus);
+diff(r(t), t);
+wrong(t) := diff(r(t),t);
+define(rp(t), diff(r(t),t));
+float(rp(1));
+load(eigen);
+uvect(rp(t));
+trigsimp(%);
+define(T(t), %);
+define(Tp(t), diff(T(t),t));
+uvect(Tp(t));
+trigsimp(%);
+define(N(t),%);
+load(vect);
+express(T(t)~N(t));
+trigsimp(%);
+define(B(t),%);
+float(B(1));
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o1) }
+\mathrm{r}\left( t\right) :=[\mathrm{cos}\left( t\right) ,\mathrm{sin}\left( t\right) ,t]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o2) }
+[\mathrm{cos}\left( 1\right) ,\mathrm{sin}\left( 1\right) ,1]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o3) }
+[0.5403023058681398,0.8414709848078965,1.0]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o4) }
+/usr/share/maxima/5.34.1/share/draw/draw.lisp
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o5) }
+[\mathrm{gr3d}\left( parametric\right) ]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o6) }
+[\mathrm{cos}\left( 2\right) ,\mathrm{sin}\left( 2\right) ,2]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o7) }
+[−0.4161468365471424,0.9092974268256817,2.0]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o8) }
+[\mathrm{cos}\left( 2\right) ,\mathrm{sin}\left( 2\right) ,2]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o9) }
+[\mathrm{cos}\left( 3\right) ,\mathrm{sin}\left( 3\right) ,3]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o10) }
+[−\mathrm{sin}\left( t\right) ,\mathrm{cos}\left( t\right) ,1]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o11) }
+\mathrm{wrong}\left( t\right) :=\mathrm{diff}\left( \mathrm{r}\left( t\right) ,t\right) 
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o12) }
+\mathrm{rp}\left( t\right) :=[−\mathrm{sin}\left( t\right) ,\mathrm{cos}\left( t\right) ,1]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o13) }
+[−0.8414709848078965,0.5403023058681398,1.0]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o14) }
+/usr/share/maxima/5.34.1/share/matrix/eigen.mac
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o15) }
+[−\frac{\mathrm{sin}\left( t\right) }{\sqrt{{\mathrm{sin}\left( t\right) }^{2}+{\mathrm{cos}\left( t\right) }^{2}+1}},\frac{\mathrm{cos}\left( t\right) }{\sqrt{{\mathrm{sin}\left( t\right) }^{2}+{\mathrm{cos}\left( t\right) }^{2}+1}},\frac{1}{\sqrt{{\mathrm{sin}\left( t\right) }^{2}+{\mathrm{cos}\left( t\right) }^{2}+1}}]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o16) }
+[−\frac{\mathrm{sin}\left( t\right) }{\sqrt{2}},\frac{\mathrm{cos}\left( t\right) }{\sqrt{2}},\frac{1}{\sqrt{2}}]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o17) }
+\mathrm{T}\left( t\right) :=[−\frac{\mathrm{sin}\left( t\right) }{\sqrt{2}},\frac{\mathrm{cos}\left( t\right) }{\sqrt{2}},\frac{1}{\sqrt{2}}]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o18) }
+\mathrm{Tp}\left( t\right) :=[−\frac{\mathrm{cos}\left( t\right) }{\sqrt{2}},−\frac{\mathrm{sin}\left( t\right) }{\sqrt{2}},0]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o19) }
+[−\frac{\mathrm{cos}\left( t\right) }{\sqrt{{\mathrm{sin}\left( t\right) }^{2}+{\mathrm{cos}\left( t\right) }^{2}}},−\frac{\mathrm{sin}\left( t\right) }{\sqrt{{\mathrm{sin}\left( t\right) }^{2}+{\mathrm{cos}\left( t\right) }^{2}}},0]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o20) }
+[−\mathrm{cos}\left( t\right) ,−\mathrm{sin}\left( t\right) ,0]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o21) }
+\mathrm{N}\left( t\right) :=[−\mathrm{cos}\left( t\right) ,−\mathrm{sin}\left( t\right) ,0]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o22) }
+/usr/share/maxima/5.34.1/share/vector/vect.mac
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o23) }
+[\frac{\mathrm{sin}\left( t\right) }{\sqrt{2}},−\frac{\mathrm{cos}\left( t\right) }{\sqrt{2}},\frac{{\mathrm{sin}\left( t\right) }^{2}}{\sqrt{2}}+\frac{{\mathrm{cos}\left( t\right) }^{2}}{\sqrt{2}}]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o24) }
+[\frac{\mathrm{sin}\left( t\right) }{\sqrt{2}},−\frac{\mathrm{cos}\left( t\right) }{\sqrt{2}},\frac{1}{\sqrt{2}}]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o25) }
+\mathrm{B}\left( t\right) :=[\frac{\mathrm{sin}\left( t\right) }{\sqrt{2}},−\frac{\mathrm{cos}\left( t\right) }{\sqrt{2}},\frac{1}{\sqrt{2}}]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o26) }
+[0.5950098395293859,−0.3820514243700897,0.7071067811865475]
+\end{math}
+%%%%%%%%%%%%%%%
+
+\end{document}

@@ -1,0 +1,147 @@
+\documentclass{article}
+
+%% Created with wxMaxima 13.04.2
+
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+
+\definecolor{labelcolor}{RGB}{100,0,0}
+
+\begin{document}
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i1) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+load(vect);
+f(x,y):= exp(x^2)*sin(y);
+scalefactors([x,y]);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o1) }
+/usr/share/maxima/5.34.1/share/vector/vect.mac
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o2) }
+\mathrm{f}\left( x,y\right) :=\mathrm{exp}\left( {x}^{2}\right) \,\mathrm{sin}\left( y\right) 
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o3) }
+done
+\end{math}
+%%%%%%%%%%%%%%%
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i4) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+gdf : grad(f(x,y));
+ev(express(gdf),diff);
+define(gdf(x,y),%);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o4) }
+\mathrm{grad}\left( {e}^{{x}^{2}}\,\mathrm{sin}\left( y\right) \right) 
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o5) }
+[2\,x\,{e}^{{x}^{2}}\,\mathrm{sin}\left( y\right) ,{e}^{{x}^{2}}\,\mathrm{cos}\left( y\right) ]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o6) }
+\mathrm{gdf}\left( x,y\right) :=[2\,x\,{e}^{{x}^{2}}\,\mathrm{sin}\left( y\right) ,{e}^{{x}^{2}}\,\mathrm{cos}\left( y\right) ]
+\end{math}
+%%%%%%%%%%%%%%%
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i7) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+v:[3,4];
+(gdf(1,2).v)/sqrt(v.v);
+ev(%,diff);
+float(%);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o7) }
+[3,4]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o8) }
+\frac{6\,e\,\mathrm{sin}\left( 2\right) +4\,e\,\mathrm{cos}\left( 2\right) }{5}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o9) }
+\frac{6\,e\,\mathrm{sin}\left( 2\right) +4\,e\,\mathrm{cos}\left( 2\right) }{5}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o10) }
+2.061108499400332
+\end{math}
+%%%%%%%%%%%%%%%
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i11) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+sqrt(gdf(1,2).gdf(1,2));
+float(ev(%,diff));
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o11) }
+\sqrt{4\,{e}^{2}\,{\mathrm{sin}\left( 2\right) }^{2}+{e}^{2}\,{\mathrm{cos}\left( 2\right) }^{2}}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o12) }
+5.071228088168654
+\end{math}
+%%%%%%%%%%%%%%%
+
+\end{document}

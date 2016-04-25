@@ -2,39 +2,31 @@
 /* [ Created with wxMaxima version 13.04.2 ] */
 
 /* [wxMaxima: input   start ] */
-f(x,y) := (6*x^2-3*y^2)^2;
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
 load(draw);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-draw3d(explicit(f(x,y),x,-3,3,y,-3,3));
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-draw3d(enhanced3d = true, explicit(f(x,y),x,-3,3,y,-3,3));
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-draw3d(explicit(f(x,y),x,-5,5,y,-5,5),
-    contour_levels = 15,
-    contour        = map);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-contour_plot(f(x,y),[x,-5,5],[y,-5,5]);
+f(x,y) := (5*x^2-2*y^2)^0.25;
+draw3d(explicit(f(x,y),x,-5,5,y,-5,5));
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
 draw3d(enhanced3d = true,
-       explicit(f(x,y),x,-3,3,y,-3,3),
-       contour_levels = 15,
-       contour = surface,
-       surface_hide = true);
+       explicit(f(x,y),x,-5,5,y,-5,5),
+       palette = [green,blue,cyan,red]);
 /* [wxMaxima: input   end   ] */
 
+/* [wxMaxima: input   start ] */
+draw3d(explicit(f(x,y),x,-5,5,y,-5,5),
+    contour_levels = 20,
+    contour        = map);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(enhanced3d = true,
+       explicit(f(x,y),x,-5,5,y,-5,5),
+       contour_levels = 20,
+       contour = surface,
+       palette = [green,blue,cyan,red],
+       surface_hide = true);
+/* [wxMaxima: input   end   ] */
 
 /* Maxima can't load/batch files which end with a comment! */
 "Created with wxMaxima"$

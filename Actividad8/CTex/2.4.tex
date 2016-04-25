@@ -1,0 +1,96 @@
+\documentclass{article}
+
+%% Created with wxMaxima 13.04.2
+
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+
+\definecolor{labelcolor}{RGB}{100,0,0}
+
+\begin{document}
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i1) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+r(t) := [t, cos(t), sin(t)];
+rp(t) := [1,-sin(t), cos(t)];
+Tp(t) := [0,-cos(t), sin(t)]/sqrt(2);
+sqrt(Tp(t) . Tp(t))/sqrt(rp(t).rp(t));
+trigsimp(%);
+define(kappa(t),%);
+integrate(r(t),t);
+g(t) := [2*t,3*sin(t),3*cos(t)];
+define(gp(t) , diff(g(t),t));
+integrate(trigsimp(sqrt(gp(t).gp(t))),t,0,2*%pi);
+romberg(sqrt(gp(t).gp(t)),t,0,2*%pi);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o1) }
+\mathrm{r}\left( t\right) :=[t,\mathrm{cos}\left( t\right) ,\mathrm{sin}\left( t\right) ]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o2) }
+\mathrm{rp}\left( t\right) :=[1,−\mathrm{sin}\left( t\right) ,\mathrm{cos}\left( t\right) ]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o3) }
+\mathrm{Tp}\left( t\right) :=\frac{[0,−\mathrm{cos}\left( t\right) ,\mathrm{sin}\left( t\right) ]}{\sqrt{2}}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o4) }
+\frac{\sqrt{\frac{{\mathrm{sin}\left( t\right) }^{2}}{2}+\frac{{\mathrm{cos}\left( t\right) }^{2}}{2}}}{\sqrt{{\mathrm{sin}\left( t\right) }^{2}+{\mathrm{cos}\left( t\right) }^{2}+1}}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o5) }
+\frac{1}{2}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o6) }
+\kappa\left( t\right) :=\frac{1}{2}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o7) }
+[\frac{{t}^{2}}{2},\mathrm{sin}\left( t\right) ,−\mathrm{cos}\left( t\right) ]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o8) }
+\mathrm{g}\left( t\right) :=[2\,t,3\,\mathrm{sin}\left( t\right) ,3\,\mathrm{cos}\left( t\right) ]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o9) }
+\mathrm{gp}\left( t\right) :=[2,3\,\mathrm{cos}\left( t\right) ,−3\,\mathrm{sin}\left( t\right) ]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o10) }
+2\,\sqrt{13}\,\pi 
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o11) }
+22.65434679827795
+\end{math}
+%%%%%%%%%%%%%%%
+
+\end{document}

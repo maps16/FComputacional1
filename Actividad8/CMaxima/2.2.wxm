@@ -1,0 +1,13 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+ellips1: x^2/3+0.5*x*y+z   = 0;
+load(draw);
+draw3d(enhanced3d = true,
+       palette = [cyan,blue,cyan],
+       implicit(ellips1, x,-100,100, y,-100,100, z,-100,100));
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$
