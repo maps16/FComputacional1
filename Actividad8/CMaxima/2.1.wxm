@@ -4,20 +4,11 @@
 /* [wxMaxima: input   start ] */
 a: [6,2,5];
 b: [8,-3,0];
-a+b;
 a.b;
 load(vect);
-a ~ b;
-express(%);
-sqrt(a.a);
-(a.b)/(a.a)*a;
+express(a~b);
 c: [-5,2,9];
-a.(b~c);
-express(%);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-kill(all);
+express(a.(b~c));
 /* [wxMaxima: input   end   ] */
 
 /* Maxima can't load/batch files which end with a comment! */

@@ -18,23 +18,18 @@
 %%% INPUT:
 \begin{minipage}[t]{8ex}{\color{red}\bf
 \begin{verbatim}
--->  
+(%i1) 
 \end{verbatim}}
 \end{minipage}
 \begin{minipage}[t]{\textwidth}{\color{blue}
 \begin{verbatim}
 a: [6,2,5];
 b: [8,-3,0];
-a+b;
 a.b;
 load(vect);
-a ~ b;
-express(%);
-sqrt(a.a);
-(a.b)/(a.a)*a;
+express(a~b);
 c: [-5,2,9];
-a.(b~c);
-express(%);
+express(a.(b~c));
 \end{verbatim}}
 \end{minipage}
 %%% OUTPUT:
@@ -50,78 +45,27 @@ express(%);
 
 \begin{math}\displaystyle
 \parbox{8ex}{\color{labelcolor}(\%o3) }
-[1.2,0.4,1.0]
-\end{math}
-
-\begin{math}\displaystyle
-\parbox{8ex}{\color{labelcolor}(\%o4) }
-[14,−1,5]
-\end{math}
-
-\begin{math}\displaystyle
-\parbox{8ex}{\color{labelcolor}(\%o5) }
 42
 \end{math}
 
 \begin{math}\displaystyle
-\parbox{8ex}{\color{labelcolor}(\%o6) }
+\parbox{8ex}{\color{labelcolor}(\%o4) }
 /usr/share/maxima/5.34.1/share/vector/vect.mac
 \end{math}
 
 \begin{math}\displaystyle
-\parbox{8ex}{\color{labelcolor}(\%o7) }
-[6,2,5] ~ [8,−3,0]
-\end{math}
-
-\begin{math}\displaystyle
-\parbox{8ex}{\color{labelcolor}(\%o8) }
+\parbox{8ex}{\color{labelcolor}(\%o5) }
 [15,40,−34]
 \end{math}
 
 \begin{math}\displaystyle
-\parbox{8ex}{\color{labelcolor}(\%o9) }
-\sqrt{65}
-\end{math}
-
-\begin{math}\displaystyle
-\parbox{8ex}{\color{labelcolor}(\%o10) }
-[\frac{252}{65},\frac{84}{65},\frac{42}{13}]
-\end{math}
-
-\begin{math}\displaystyle
-\parbox{8ex}{\color{labelcolor}(\%o11) }
+\parbox{8ex}{\color{labelcolor}(\%o6) }
 [−5,2,9]
 \end{math}
 
 \begin{math}\displaystyle
-\parbox{8ex}{\color{labelcolor}(\%o12) }
-−[6,2,5] . [−5,2,9] ~ [8,−3,0]
-\end{math}
-
-\begin{math}\displaystyle
-\parbox{8ex}{\color{labelcolor}(\%o13) }
+\parbox{8ex}{\color{labelcolor}(\%o7) }
 −301
-\end{math}
-%%%%%%%%%%%%%%%
-
-
-\noindent
-%%%%%%%%%%%%%%%
-%%% INPUT:
-\begin{minipage}[t]{8ex}{\color{red}\bf
-\begin{verbatim}
-(%i14) 
-\end{verbatim}}
-\end{minipage}
-\begin{minipage}[t]{\textwidth}{\color{blue}
-\begin{verbatim}
-kill(all);
-\end{verbatim}}
-\end{minipage}
-%%% OUTPUT:
-\begin{math}\displaystyle
-\parbox{8ex}{\color{labelcolor}(\%o0) }
-done
 \end{math}
 %%%%%%%%%%%%%%%
 
