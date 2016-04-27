@@ -2,22 +2,13 @@
 /* [ Created with wxMaxima version 13.04.2 ] */
 
 /* [wxMaxima: input   start ] */
-f(x,y) := 2*x^2+y^2;
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
+f(x,y) := x^2+2*y^2;
 g : y^2+x^2;
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
 eq1: diff(f(x,y),x)=h*diff(g,x);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
 eq2: diff(f(x,y),y)=h*diff(g,y);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
 eq3: g=1;
 /* [wxMaxima: input   end   ] */
 
@@ -27,6 +18,7 @@ solve([eq1,eq2,eq3],[x,y,h]);
 
 /* [wxMaxima: input   start ] */
 [f(1,0),f(-1,0),f(0,-1),f(0,1)];
+kill(all);
 /* [wxMaxima: input   end   ] */
 
 /* Maxima can't load/batch files which end with a comment! */

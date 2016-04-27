@@ -1,0 +1,123 @@
+\documentclass{article}
+
+%% Created with wxMaxima 13.04.2
+
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+
+\definecolor{labelcolor}{RGB}{100,0,0}
+
+\begin{document}
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i1) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+f(x,y) := x^2+2*y^2;
+g : y^2+x^2;
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o1) }
+\mathrm{f}\left( x,y\right) :={x}^{2}+2\,{y}^{2}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o2) }
+{y}^{2}+{x}^{2}
+\end{math}
+%%%%%%%%%%%%%%%
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i3) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+eq1: diff(f(x,y),x)=h*diff(g,x);
+eq2: diff(f(x,y),y)=h*diff(g,y);
+eq3: g=1;
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o3) }
+2\,x=2\,h\,x
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o4) }
+4\,y=2\,h\,y
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o5) }
+{y}^{2}+{x}^{2}=1
+\end{math}
+%%%%%%%%%%%%%%%
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i6) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+solve([eq1,eq2,eq3],[x,y,h]);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o6) }
+[[x=1,y=0,h=1],[x=−1,y=0,h=1],[x=0,y=−1,h=2],[x=0,y=1,h=2]]
+\end{math}
+%%%%%%%%%%%%%%%
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i7) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+[f(1,0),f(-1,0),f(0,-1),f(0,1)];
+kill(all);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o7) }
+[1,1,2,2]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o0) }
+done
+\end{math}
+%%%%%%%%%%%%%%%
+
+\end{document}

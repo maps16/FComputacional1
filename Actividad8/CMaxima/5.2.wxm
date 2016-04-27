@@ -3,29 +3,14 @@
 
 /* [wxMaxima: input   start ] */
 f(x,y) := x^2+y^2;
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
 [x,y] : [cos(t), sin(2*t)];
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
 rp: diff([x,y],t);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
 romberg(f(x,y)*sqrt(rp.rp), t, 0,1);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
 F(x,y,z) := [-x*y^3, x*z, y*z^2];
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
 [x,y,z]: [t^2,t^3,t^4];
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
 romberg(F(x,y,z).diff([x,y,z],t),t,0,1);
 /* [wxMaxima: input   end   ] */
 

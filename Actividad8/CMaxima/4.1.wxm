@@ -2,15 +2,15 @@
 /* [ Created with wxMaxima version 13.04.2 ] */
 
 /* [wxMaxima: input   start ] */
-f(x,y):= x^2+y^2;
+f: 4*x^3-4*x*y;
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-[x,y]: [r*cos(theta), r*sin(theta)];
+integrate(integrate(f,y),x);
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-integrate(integrate(f(x,y)*r,r,0,2*cos(theta)),theta,-%pi/2,%pi/2);
+integrate(integrate(f,y,x^1/2,2-x),x,0,1);
 /* [wxMaxima: input   end   ] */
 
 /* Maxima can't load/batch files which end with a comment! */

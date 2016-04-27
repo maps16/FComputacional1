@@ -1,0 +1,153 @@
+\documentclass{article}
+
+%% Created with wxMaxima 13.04.2
+
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+
+\definecolor{labelcolor}{RGB}{100,0,0}
+
+\begin{document}
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i1) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+load(vect);
+F(x,y):= [4*x^3-5*y^2,5*y^3-3*x];
+scalefactors([x,y]);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o1) }
+/usr/share/maxima/5.34.1/share/vector/vect.mac
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o2) }
+\mathrm{F}\left( x,y\right) :=[4\,{x}^{3}−5\,{y}^{2},5\,{y}^{3}−3\,x]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o3) }
+done
+\end{math}
+%%%%%%%%%%%%%%%
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i4) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+curl(F(x,y));
+express(%);
+ev(%,diff);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o4) }
+\mathrm{curl}\left( [4\,{x}^{3}−5\,{y}^{2},5\,{y}^{3}−3\,x]\right) 
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o5) }
+\frac{d}{d\,x}\,\left( 5\,{y}^{3}−3\,x\right) −\frac{d}{d\,y}\,\left( 4\,{x}^{3}−5\,{y}^{2}\right) 
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o6) }
+10\,y−3
+\end{math}
+%%%%%%%%%%%%%%%
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i7) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+F(x,y):= [x^3+5*y,5*y^3+5*x];
+ev(express(curl(F(x,y))),diff);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o7) }
+\mathrm{F}\left( x,y\right) :=[{x}^{3}+5\,y,5\,{y}^{3}+5\,x]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o8) }
+0
+\end{math}
+%%%%%%%%%%%%%%%
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i9) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+F(u,v):= [u^3+5*v,5*v^3+5*u];
+scalefactors([u,v]);
+potential(F(u,v));
+define(f(u,v),%);
+f(2,3)-f(0,1);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o9) }
+\mathrm{F}\left( u,v\right) :=[{u}^{3}+5\,v,5\,{v}^{3}+5\,u]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o10) }
+done
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o11) }
+\frac{5\,{v}^{4}+20\,u\,v+{u}^{4}}{4}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o12) }
+\mathrm{f}\left( u,v\right) :=\frac{5\,{v}^{4}+20\,u\,v+{u}^{4}}{4}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o13) }
+134
+\end{math}
+%%%%%%%%%%%%%%%
+
+\end{document}

@@ -1,0 +1,93 @@
+\documentclass{article}
+
+%% Created with wxMaxima 13.04.2
+
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+
+\definecolor{labelcolor}{RGB}{100,0,0}
+
+\begin{document}
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i1) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+f(x,y,z):= y*z;
+[x,y,z]:[r*cos(theta),r*sin(theta),z];
+integrate(integrate(integrate(f(x,y,z)*r,z,0,3),r,0,2),theta,0,%pi);
+kill(f,x,y,z);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o1) }
+\mathrm{f}\left( x,y,z\right) :=y\,z
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o2) }
+[r\,\mathrm{cos}\left( \theta\right) ,r\,\mathrm{sin}\left( \theta\right) ,z]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o3) }
+24
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o4) }
+done
+\end{math}
+%%%%%%%%%%%%%%%
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i5) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+f(x,y,z):= x*z;
+[x,y,z]: [rho*sin(phi)*cos(theta),rho*sin(phi)*sin(theta),rho*cos(phi)];
+integrate(integrate(integrate(f(x,y,z)*rho^2*sin(phi),rho,0,1),theta,0,%pi),phi,0,%pi/2);
+kill(f,x,y,z);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o5) }
+\mathrm{f}\left( x,y,z\right) :=x\,z
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o6) }
+[\mathrm{sin}\left( \phi\right) \,\rho\,\mathrm{cos}\left( \theta\right) ,\mathrm{sin}\left( \phi\right) \,\rho\,\mathrm{sin}\left( \theta\right) ,\mathrm{cos}\left( \phi\right) \,\rho]
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o7) }
+0
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o8) }
+done
+\end{math}
+%%%%%%%%%%%%%%%
+
+\end{document}

@@ -1,0 +1,42 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 13.04.2 ] */
+
+/* [wxMaxima: input   start ] */
+load(draw);
+f(x,y) := x^3 +y^3-x*y;
+draw3d(enhanced3d =true,
+       palette=[magenta, cyan, blue],
+       explicit(f(x,y),x,-5,5,y,-5,5));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+draw3d(contour_levels=10,
+       contour=map,
+       explicit(f(x,y),x,-5,5,y,-5,5));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+fx : diff(f(x,y),x);
+fy : diff(f(x,y),y);
+solve([fx,fy],[x,y]);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+H: hessian(f(x,y),[x,y]);
+determinant(H);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst([x=1/3, y=1/3],diff(fx,x));
+subst([x=1/3, y=1/3],determinant(H));
+f(1/3,1/3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subst([x=0, y=0],diff(fx,x));
+subst([x=0, y=0],determinant(H));
+f(0,0);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

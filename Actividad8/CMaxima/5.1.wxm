@@ -4,9 +4,6 @@
 /* [wxMaxima: input   start ] */
 load(draw);
 load(vect);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
 F(x,y):= (x^2,y^2);
 /* [wxMaxima: input   end   ] */
 
@@ -36,7 +33,7 @@ apply(draw2d, append([head_length=0.25, color=green], vect2));
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-coord: setify(makelist(k,k,-4,4));
+coord: setify(makelist(k,k,-3,3));
 points3d : listify(cartesian_product(coord, coord, coord));
 vf3d(x,y,z):= vector([x,y,z],[z,x*z,y]/8);
 vect3 : makelist(vf3d(k[1],k[2],k[3]),k,points3d);

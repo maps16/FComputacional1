@@ -1,0 +1,90 @@
+\documentclass{article}
+
+%% Created with wxMaxima 13.04.2
+
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+
+\definecolor{labelcolor}{RGB}{100,0,0}
+
+\begin{document}
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i1) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+f(x,y) := x+y;
+[x,y]: [u^3-v^4, 5*u*v];
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o1) }
+\mathrm{f}\left( x,y\right) :=x+y
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o2) }
+[{u}^{3}−{v}^{4},5\,u\,v]
+\end{math}
+%%%%%%%%%%%%%%%
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i3) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+J: jacobian([x,y],[u,v]);
+J: determinant(J);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o3) }
+\begin{pmatrix}3\,{u}^{2} & −4\,{v}^{3}\cr 5\,v & 5\,u\end{pmatrix}
+\end{math}
+
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o4) }
+20\,{v}^{4}+15\,{u}^{3}
+\end{math}
+%%%%%%%%%%%%%%%
+
+
+\noindent
+%%%%%%%%%%%%%%%
+%%% INPUT:
+\begin{minipage}[t]{8ex}{\color{red}\bf
+\begin{verbatim}
+(%i5) 
+\end{verbatim}}
+\end{minipage}
+\begin{minipage}[t]{\textwidth}{\color{blue}
+\begin{verbatim}
+integrate(integrate(f(x,y)*J,u,1,2),v,3,4);
+\end{verbatim}}
+\end{minipage}
+%%% OUTPUT:
+\begin{math}\displaystyle
+\parbox{8ex}{\color{labelcolor}(\%o5) }
+−\frac{113349305}{252}
+\end{math}
+%%%%%%%%%%%%%%%
+
+\end{document}

@@ -2,23 +2,15 @@
 /* [ Created with wxMaxima version 13.04.2 ] */
 
 /* [wxMaxima: input   start ] */
-f(x,y) := x+y;
+f(x,y):= 4*x^2+4*y^2;
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-[x,y]: [u^3-v^4, 5*u*v];
+[x,y]: [r*cos(theta), r*sin(theta)];
 /* [wxMaxima: input   end   ] */
 
 /* [wxMaxima: input   start ] */
-J: jacobian([x,y],[u,v]);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-J: determinant(J);
-/* [wxMaxima: input   end   ] */
-
-/* [wxMaxima: input   start ] */
-integrate(integrate(f(x,y)*J,u,1,2),v,3,4);
+integrate(integrate(f(x,y)*r,r,0,2*cos(theta)),theta,-%pi/2,%pi/2);
 /* [wxMaxima: input   end   ] */
 
 /* Maxima can't load/batch files which end with a comment! */
