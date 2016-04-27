@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.9.20)  26 APR 2016 19:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.9.20)  27 APR 2016 11:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -489,7 +489,7 @@ e
 ))
 \c@lstlisting=\count118
 
-Overfull \hbox (43.94446pt too wide) in paragraph at lines 45--61
+Overfull \hbox (43.94446pt too wide) in paragraph at lines 51--67
 [][] [] 
  []
 
@@ -500,7 +500,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.69 [8,−
+l.75 [8,−
            3,0]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -513,7 +513,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.84 [15,40,−
+l.90 [15,40,−
                34]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -526,7 +526,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.89 [−
+l.95 [−
          5,2,9]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -539,15 +539,15 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.94 −
-        301
+l.100 −
+         301
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (63.60066pt too wide) in paragraph at lines 99--114
-\OT1/cmr/m/n/12 los. [] [] 
+Overfull \hbox (144.28316pt too wide) in paragraph at lines 106--121
+\OT1/cmr/m/n/12 po-der vi-sua-li-zar-los. [] [] 
  []
 
 [1
@@ -556,34 +556,302 @@ Overfull \hbox (63.60066pt too wide) in paragraph at lines 99--114
 <images/1.png, id=11, 451.6875pt x 386.19281pt>
 File: images/1.png Graphic file (type png)
  <use images/1.png>
-Package pdftex.def Info: images/1.png used on input line 131.
-(pdftex.def)             Requested size: 338.76479pt x 289.64388pt.
- [2 <./images/1.png (PNG copy)>] (./Actividad8.aux
+Package pdftex.def Info: images/1.png used on input line 138.
+(pdftex.def)             Requested size: 225.84319pt x 193.09592pt.
+
+Overfull \hbox (43.94446pt too wide) in paragraph at lines 146--178
+[] []
+ []
+
+[2 <./images/1.png (PNG copy)>]
+<images/2.png, id=18, 451.6875pt x 386.19281pt>
+File: images/2.png Graphic file (type png)
+ <use images/2.png>
+Package pdftex.def Info: images/2.png used on input line 196.
+(pdftex.def)             Requested size: 225.84319pt x 193.09592pt.
+
+
+! Package inputenc Error: Unicode char \u8:− not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.227 \mathrm{rp}\left( t\right) :=[−
+                                       \mathrm{sin}\left( t\right) ,\mathrm{...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[3 <./images/2.png (PNG copy)>]
+
+! Package inputenc Error: Unicode char \u8:− not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.232 [−
+          0.8414709848078965,0.5403023058681398,1.0]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8:− not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.237 \mathrm{T}\left( t\right) :=[−
+                                      \frac{\mathrm{sin}\left( t\right) }{\s...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8:− not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.242 \mathrm{Tp}\left( t\right) :=[−
+                                       \frac{\mathrm{cos}\left( t\right) }{\...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8:− not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.242 ...athrm{cos}\left( t\right) }{\sqrt{2}},−
+                                                  \frac{\mathrm{sin}\left( t...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8:− not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 \mathrm{N}\left( t\right) :=[−
+                                      \mathrm{cos}\left( t\right) ,−\mathr...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8:− not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.247 ...t) :=[−\mathrm{cos}\left( t\right) ,−
+                                                  \mathrm{sin}\left( t\right...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8:− not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.252 ...athrm{sin}\left( t\right) }{\sqrt{2}},−
+                                                  \frac{\mathrm{cos}\left( t...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8:− not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.257 ...athrm{sin}\left( t\right) }{\sqrt{2}},−
+                                                  \frac{\mathrm{cos}\left( t...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8:− not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.262 [0.5950098395293859,−
+                             0.3820514243700897,0.7071067811865475]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (43.94446pt too wide) in paragraph at lines 271--296
+[][] []
+ []
+
+
+! Package inputenc Error: Unicode char \u8:− not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.299 \mathrm{rp}\left( t\right) :=[1,−
+                                         \mathrm{sin}\left( t\right) ,\mathr...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8:− not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.304 ...,\mathrm{sin}\left( t\right) ]}{\sqrt{2}}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! Package inputenc Error: Unicode char \u8:− not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.324 ...^{2}}{2},\mathrm{sin}\left( t\right) ,−
+                                                  \mathrm{cos}\left( t\right) ]
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[4]
+
+! Package inputenc Error: Unicode char \u8:− not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.334 ... :=[2,3\,\mathrm{cos}\left( t\right) ,−
+                                                  3\,\mathrm{sin}\left( t\ri...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (79.26717pt too wide) in paragraph at lines 349--363
+\OT1/cmr/m/n/12 car-las. [] [] 
+ []
+
+
+! Package inputenc Error: Unicode char \u8:− not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.371 ...\left( x,y\right) :={\left( 5\,{x}^{2}−
+                                                  2\,{y}^{2}\right) }^{0.25}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+<images/3.png, id=27, 451.6875pt x 386.19281pt>
+File: images/3.png Graphic file (type png)
+ <use images/3.png>
+Package pdftex.def Info: images/3.png used on input line 381.
+(pdftex.def)             Requested size: 225.84319pt x 193.09592pt.
+
+Overfull \hbox (43.94446pt too wide) in paragraph at lines 387--404
+[][] []
+ []
+
+<images/4.png, id=28, 451.6875pt x 386.19281pt>
+File: images/4.png Graphic file (type png)
+ <use images/4.png>
+Package pdftex.def Info: images/4.png used on input line 407.
+(pdftex.def)             Requested size: 225.84319pt x 193.09592pt.
+ [5 <./images/3.png (PNG copy)>]
+Overfull \hbox (43.94446pt too wide) in paragraph at lines 413--425
+[][] [] 
+ []
+
+<images/5.png, id=32, 451.6875pt x 386.19281pt>
+File: images/5.png Graphic file (type png)
+ <use images/5.png>
+Package pdftex.def Info: images/5.png used on input line 433.
+(pdftex.def)             Requested size: 225.84319pt x 193.09592pt.
+
+Overfull \hbox (43.94446pt too wide) in paragraph at lines 437--453
+[] [] 
+ []
+
+<images/6.png, id=33, 451.6875pt x 386.19281pt>
+File: images/6.png Graphic file (type png)
+ <use images/6.png>
+Package pdftex.def Info: images/6.png used on input line 460.
+(pdftex.def)             Requested size: 225.84319pt x 193.09592pt.
+ [6 <./images/4.png (PNG copy)> <./images/5.png (PNG copy)>] [7 <./images/6.png
+ (PNG copy)>] (./Actividad8.aux
 LaTeX Info: Redefining \. on input line 3.
 LaTeX Info: Redefining \% on input line 3.
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 ) ) 
 Here is how much of TeX's memory you used:
- 4600 strings out of 494917
- 61119 string characters out of 6178371
- 131373 words of memory out of 5000000
- 7764 multiletter control sequences out of 15000+600000
+ 4626 strings out of 494917
+ 61487 string characters out of 6178371
+ 135373 words of memory out of 5000000
+ 7785 multiletter control sequences out of 15000+600000
  10102 words of font info for 37 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  38i,8n,32p,242b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmtt12.pfb>
-Output written on Actividad8.pdf (2 pages, 99512 bytes).
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmtt12.pfb>
+Output written on Actividad8.pdf (7 pages, 224348 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
+ 74 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

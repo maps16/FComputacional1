@@ -2,32 +2,24 @@
 /* [ Created with wxMaxima version 13.04.2 ] */
 
 /* [wxMaxima: input   start ] */
-r(t) := [cos(t), sin(t), t];
-r(1);
-float(%);
 load(draw);
-draw3d(parametric(sin(1*t),cos(t),-sin(5*t),t, -4,4));
+load(eigen);
+load(vect);
+draw3d(parametric(cos(t),cos(4*t),-sin(t),t, -4,4));
+r(t) := [cos(t), sin(t), t];
+float(r(1));
 limit(r(t),t,2);
-float(%);
 limit(r(t),t, 2, plus);
 limit(r(t), t,3,minus);
-diff(r(t), t);
-wrong(t) := diff(r(t),t);
 define(rp(t), diff(r(t),t));
 float(rp(1));
-load(eigen);
-uvect(rp(t));
-trigsimp(%);
-define(T(t), %);
-define(Tp(t), diff(T(t),t));
-uvect(Tp(t));
-trigsimp(%);
-define(N(t),%);
-load(vect);
+define( T(t), trigsimp( uvect( rp(t) ) ) );
+define(Tp(t), diff( T(t), t));
+define( N(t), trigsimp( uvect( Tp(t) ) ) );
 express(T(t)~N(t));
-trigsimp(%);
-define(B(t),%);
+define(B(t),trigsimp(%));
 float(B(1));
+kill(all);
 /* [wxMaxima: input   end   ] */
 
 /* Maxima can't load/batch files which end with a comment! */
