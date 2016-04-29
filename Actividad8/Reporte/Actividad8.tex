@@ -10,6 +10,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[utf8]{inputenc}
 \usepackage{color}
+\usepackage{hyperref}
 \usepackage{graphicx}
 \graphicspath{{images/}}
 
@@ -35,7 +36,18 @@
 %====================================================
 
 \section{Introducción}
-Maxima es una herramienta de de cálculo bastante versátil. En esta paractica 
+Maxima es una herramienta de de cálculo bastante versátil. Es un sistema para la manipulación de expresiones simbólicas y numéricas, incluyendo diferenciación, integración, ecuaciones diferenciales ordinarias, sistema de ecuaciones linales, vectores, matrices, entre otros. Maxima produce resultados de alta precisión. Adicionalmete permirte la graficación de funciones y datos en dos y tres dimensiones. \cite{M}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{maxi.png}
+\caption{Interfaz de Maxima}
+\end{figure}
+
+\hspace{0.5cm} Para esta practica se nos pidió familiarizarnos con esta herramienta. Para esto se utilizó el manual de Jay Kerns sobre calculo de varias variables \cite{JK}, recreando los ejemplos que se mostraban. Para la realización de esta práctica, se utilzó wxMaxima, el cual es una interfaz grafica para trabajar con los comandos de Maxima.
+
+
+\pagebreak
 
 %====================================================
 %====================================================
@@ -104,6 +116,7 @@ express(a.(b~c));
 %====================================================
 \subsection{Lineas, Planos y Superficies Cuadraticas}
 Con maxima se pueden definir ecuaciones de planos y superficies, con el objetivo de poder visualizarlos.
+
 \begin{minipage}[t]{8ex}{\color{red}\bf
 \begin{verbatim}
 (%i1) 
@@ -1785,7 +1798,19 @@ done
 134
 \end{math}
 
+\begin{thebibliography}{3}
+\bibitem{M}
+Source Forge,
+\emph{Maxima}. Recuperado en abril de 2016 de \url{http://maxima.sourceforge.net/es/}
 
+\bibitem{JK}
+Kerns, Jay.
+\emph{Multivariable Calculus with Maxima}. Recuperado en abril de 2016 de \url{http://gkerns.people.ysu.edu/maxima/maximaintro/}
+
+\bibitem{FC}
+Lizárraga, C.
+\emph{Actividad 8 (2016-1)}. Recuperado en abril de 2016 de \url{http://computacional1.pbworks.com/w/page/106192917/Actividad\%208\%20(2016-1)}
+\end{thebibliography}
 
 
 
