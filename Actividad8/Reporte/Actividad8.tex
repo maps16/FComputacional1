@@ -36,15 +36,15 @@
 %====================================================
 
 \section{Introducción}
-Maxima es una herramienta de de cálculo bastante versátil. Es un sistema para la manipulación de expresiones simbólicas y numéricas, incluyendo diferenciación, integración, ecuaciones diferenciales ordinarias, sistema de ecuaciones linales, vectores, matrices, entre otros. Maxima produce resultados de alta precisión. Adicionalmete permirte la graficación de funciones y datos en dos y tres dimensiones. \cite{M}
+Maxima es una herramienta de de cálculo bastante versátil. Es un sistema para la manipulación de expresiones simbólicas y numéricas, incluyendo diferenciación, integración, ecuaciones diferenciales ordinarias, sistema de ecuaciones lineales, vectores, matrices, entre otros. Maxima produce resultados de alta precisión. Adicionalmete permite la graficar de funciones y datos en dos y tres dimensiones. \cite{M}
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=1]{maxi.png}
+\includegraphics[scale=0.75]{maxi.png}
 \caption{Interfaz de Maxima}
 \end{figure}
 
-\hspace{0.5cm} Para esta practica se nos pidió familiarizarnos con esta herramienta. Para esto se utilizó el manual de Jay Kerns sobre calculo de varias variables \cite{JK}, recreando los ejemplos que se mostraban. Para la realización de esta práctica, se utilzó wxMaxima, el cual es una interfaz grafica para trabajar con los comandos de Maxima.
+\hspace{0.5cm} Para esta practica se nos pidió familiarizarnos con esta herramienta. Para esto se utilizó el manual de Jay Kerns sobre calculo de varias variables \cite{JK}, recreando los ejemplos que se mostraban. Para la realización de esta práctica, se utilizó wxMaxima, el cual es una interfaz gráfica para trabajar con los comandos de Maxima.
 
 
 \pagebreak
@@ -53,10 +53,10 @@ Maxima es una herramienta de de cálculo bastante versátil. Es un sistema para 
 %====================================================
 
 \section{Geometria en tres dimensiones}
-Esta sección consta en enseñarnos herramientas para geometria tridimensional.
+Esta sección consta en enseñarnos herramientas para geometría tridimensional.
 %====================================================
 \subsection{Vectores y Algebra lineal}
-En maxima hay forma de realizar operaciones con vectores, como es el producto punto y el producto cruz.
+En Maxima hay forma de realizar operaciones con vectores, como es el producto punto y el producto cruz.
 
 \noindent
 
@@ -115,7 +115,7 @@ express(a.(b~c));
 %====================================================
 %====================================================
 \subsection{Lineas, Planos y Superficies Cuadraticas}
-Con maxima se pueden definir ecuaciones de planos y superficies, con el objetivo de poder visualizarlos.
+Con Maxima se pueden definir ecuaciones de planos y superficies, con el objetivo de poder visualizarlos.
 
 \begin{minipage}[t]{8ex}{\color{red}\bf
 \begin{verbatim}
@@ -277,7 +277,7 @@ float(B(1));
 
 
 \subsection{Longitud de Arco y Curvatura}
-En maxima nos permite realizar las operaciones para calcular estas cualidades de ecuaciones paramétricas.
+En Maxima nos permite realizar las operaciones para calcular estas cualidades de ecuaciones paramétricas.
 
 \noindent
 
@@ -359,7 +359,7 @@ romberg(sqrt(gp(t).gp(t)),t,0,2*%pi);
 %===================================================================
 %===================================================================
 \section{Funciones de varias varibles}
-Maxima tiene la habilidad de trabajar con funciones de varias varibles, así como graficarlas.
+Maxima tiene la habilidad de trabajar con funciones de varias variables, así como graficarlas.
 \noindent
 \begin{minipage}[t]{8ex}{\color{red}\bf
 \begin{verbatim}
@@ -571,7 +571,7 @@ diff(f(x,y));
 %===========================================================
 
 \subsection{Regla de la cadena y derivación implicita}
-Se puede realizar la regla de la cadena y derivación implicita.
+Se puede realizar la regla de la cadena y derivación implícita.
 \noindent
 
 \begin{minipage}[t]{8ex}{\color{red}\bf
@@ -694,7 +694,7 @@ Fz: diff(F,z);
  %=============================================================
  
  \subsection{Derivada Direccional y Gradiente}
- En maxima es simple el calculo del gradiente, lo que nos permite calculos mas simples.
+ En Maxima es simple el calculo del gradiente, lo que nos permite calculos mas simples.
  
  \noindent
 %%%%%%%%%%%%%%%
@@ -828,7 +828,7 @@ float(ev(%,diff));
 %============================================================
 
 \subsection{Optimización y Extremos Locales}
-Con maxima podemos visualizar la grafica de la función y realizar los calculos para encontrar puntos de optimización.
+Con Maxima podemos visualizar la gráfica de la función y realizar los cálculos para encontrar puntos de optimización.
 
 \noindent
 %%%%%%%%%%%%%%%
@@ -1024,6 +1024,8 @@ f(0,0);
 %===========================================================
 
 \subsection{Multiplicadores de Lagrange}
+Con Maxima también podemos realizar los cálculos para resolverlo mediante los multiplicadores de Lagrange.
+
 \noindent
 %%%%%%%%%%%%%%%
 %%% INPUT:
@@ -1194,7 +1196,7 @@ integrate(integrate(f,y,x^1/2,2-x),x,0,1);
 %============================================================
 
 \subsection{Coordenadas Polares}
-Con maxima se puede cambiar a coordenadas polares para facilitar el calculo.
+Con Maxima se puede cambiar a coordenadas polares para facilitar el calculo.
 
 \noindent
 %%%%%%%%%%%%%%%
@@ -1259,7 +1261,7 @@ integrate(integrate(f(x,y)*r,r,0,2*cos(theta)),theta,-%pi/2,%pi/2);
 %===========================================================
 
 \subsection{Integrales Triples}
-Tambien es posible realizar integrales de 3 parametros.
+También es posible realizar integrales de 3 parámetros.
 
 \noindent
 %%%%%%%%%%%%%%%
@@ -1287,8 +1289,8 @@ integrate(integrate(integrate(f(x,y,z),z,0,x+y),y,0,-x),x,0,1);
 \end{math}
 %==================================================
 
-\subsection{Integreles en Coordenadas Cilindricas y Esfericas}
-Con maxima se puede cambiar a otras coordenadas para facilitar el calculo.
+\subsection{Integrales en Coordenadas Cilíndricas y Esféricas}
+Con Maxima se puede cambiar a otras coordenadas para facilitar el calculo.
 
 \noindent
 %%%%%%%%%%%%%%%
@@ -1326,12 +1328,9 @@ kill(f,x,y,z);
 \parbox{8ex}{\color{labelcolor}(\%o4) }
 done
 \end{math}
-%%%%%%%%%%%%%%%
 
 
 \noindent
-%%%%%%%%%%%%%%%
-%%% INPUT:
 \begin{minipage}[t]{8ex}{\color{red}\bf
 \begin{verbatim}
 (%i5) 
@@ -1368,7 +1367,7 @@ done
 %============================================================0
 
 \subsection{Cambio de variable}
-Con maxima se puede realizar cambio variable para facilitar el calculo.
+Con Maxima se puede realizar cambio variable para facilitar el calculo.
 
 \noindent
 %%%%%%%%%%%%%%%
@@ -1483,7 +1482,7 @@ F(x,y):= (x^2,y^2);
 
 
 \subparagraph{Campo Vectorial Dos Dimensiones:}
-Graficación del campo vectorial.
+Gráfica del campo vectorial.
 
 \noindent
 %%%%%%%%%%%%%%%
@@ -1511,7 +1510,7 @@ apply ( draw2d , append ([head_length=0.2], [color = green ] , vect2 ));
 
 
 \subparagraph{Campo Gradiente:}
-Graficación del Campo Gradiente.
+Gráfica del Campo Gradiente.
 
 \noindent
 %%%%%%%%%%%%%%%
@@ -1558,7 +1557,7 @@ apply(draw2d, append([head_length=0.25, color=green], vect2));
 
 
 \subparagraph{Campo Vectorial Tres Dimensiones:}
-Graficación Campo vectorial 3 dimensiones.
+Gráfica Campo vectorial 3 dimensiones.
 
 \noindent
 %%%%%%%%%%%%%%%
@@ -1586,7 +1585,7 @@ apply(draw3d, append([color=red,head_length=0.1],vect3));
  %============================================================
  
 \subsection{Integral de Linea}
-Con maxima es simple realizar una integral de linea.
+Con Maxima es simple realizar una integral de linea.
 
 \noindent
 %%%%%%%%%%%%%%%
@@ -1800,16 +1799,16 @@ done
 
 \begin{thebibliography}{3}
 \bibitem{M}
-Source Forge,
-\emph{Maxima}. Recuperado en abril de 2016 de \url{http://maxima.sourceforge.net/es/}
+Source Forge (2015)
+\emph{Maxima}. Recuperado de \url{http://maxima.sourceforge.net/es/}
 
 \bibitem{JK}
-Kerns, Jay.
-\emph{Multivariable Calculus with Maxima}. Recuperado en abril de 2016 de \url{http://gkerns.people.ysu.edu/maxima/maximaintro/}
+Kerns, Jay. (2009)
+\emph{Multivariable Calculus with Maxima}. Recuperado de \url{http://gkerns.people.ysu.edu/maxima/maximaintro/}
 
 \bibitem{FC}
-Lizárraga, C.
-\emph{Actividad 8 (2016-1)}. Recuperado en abril de 2016 de \url{http://computacional1.pbworks.com/w/page/106192917/Actividad\%208\%20(2016-1)}
+Lizárraga, C. (2016)
+\emph{Actividad 8 (2016-1)}. Recuperado de \url{http://computacional1.pbworks.com/w/page/106192917/Actividad\%208\%20(2016-1)}
 \end{thebibliography}
 
 
